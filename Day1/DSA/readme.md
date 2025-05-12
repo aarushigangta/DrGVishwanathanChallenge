@@ -21,8 +21,8 @@ nextnode – temporarily holds the next node.
 
 Steps:
 
-Iterate through the list.
+1. Iterate through the list.
 
-For each node, reverse its next pointer.
+2. For each node, reverse its next pointer.
 
-Move forward by updating prevnode and currnode.
+3. Move forward by updating prevnode and currnode.

@@ -10,7 +10,7 @@ Input: 1 → 2 → 3 → 4 → 5
 
 Output: 5 → 4 → 3 → 2 → 1 
 
-Approach
+Approach: 
 The approach used is iterative reversal using three pointers:
 
 prevnode – initially null, holds the previous node.
@@ -20,6 +20,7 @@ currnode – starts at head, traverses the list.
 nextnode – temporarily holds the next node.
 
 Steps:
+
 Iterate through the list.
 
 For each node, reverse its next pointer.

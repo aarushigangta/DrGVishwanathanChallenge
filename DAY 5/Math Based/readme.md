@@ -1,22 +1,27 @@
 **Problem Statement**
 
-Given an integer x, return true if x is a palindrome, and false otherwise.
-A palindrome is a number that reads the same forward and backward. Check whether the integer x is a palindromic number.
+Given a positive integer num, write a function that returns true if num is a perfect square, otherwise false.
 
 **Approach**
 
-Edge Case: If x < 0, return false because negative numbers cannot be palindromes.
+This solution uses binary search to efficiently determine whether a number is a perfect square.
 
-Convert the integer to a String.
+Steps
 
-Use two pointers:
+Initialize Binary Search:
 
-left starts at the beginning of the string.
+Set left = 1 and right = num.
 
-right starts at the end of the string.
+Perform Binary Search:
 
-While left < right, compare characters:
+Calculate mid = (left + right) / 2.
 
-If mismatch → return false
+Compute mid * mid and store it in midSquare (cast to long to prevent overflow).
 
-If all characters match → return true
+If midSquare == num, return true.
+
+If midSquare > num, search the left half.
+
+If midSquare < num, search the right half.
+
+Return false if no perfect square is found.

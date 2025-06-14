@@ -1,0 +1,39 @@
+class Solution {
+    public int subarrayLCM(int[] nums, int k) {
+        int count = 0;
+        int n = nums.length;
+        
+       
+        for (int i = 0; i < n; i++) {
+            long currentLCM = 1;
+            
+          
+            for (int j = i; j < n; j++) {
+               
+                currentLCM = lcm(currentLCM, nums[j]);
+                
+                
+                if (currentLCM > k) {
+                    break;
+                }
+                
+                if (currentLCM == k) {
+                    count++;
+                }
+            }
+        }
+        
+        return count;
+    }
+    
+    private long gcd(long a, long b) {
+        if (b == 0) {
+            return a;
+        }
+        return gcd(b, a % b);
+    }
+    
+    private long lcm(long a, long b) {
+        return a * (b / gcd(a, b));
+    }
+}
